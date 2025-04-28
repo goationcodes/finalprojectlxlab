@@ -8,12 +8,9 @@ int main(int argc, char* argv[]) {
         cerr << "Usage: " << argv[0] << " shift_amount" << endl;
         return 1;
     }
-
     int shift = stoi(argv[1]) % 26;
     string input;
     string cleaned = "";
-
-    
     while (getline(cin, input)) {
         for (char c : input) {
             if (isalpha(c)) {
@@ -23,7 +20,6 @@ int main(int argc, char* argv[]) {
             }
         }
     }
-
     
     int count = 0;
     for (char c : cleaned) {
